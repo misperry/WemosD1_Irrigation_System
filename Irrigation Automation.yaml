@@ -1,0 +1,19 @@
+alias: Irrigation System Start
+description: Starts normal watering cycle
+trigger:
+  - platform: time
+    at: '17:30:00'
+condition:
+  - condition: numeric_state
+    entity_id: sensor.openweathermap_forecast_precipitation
+    below: '80'
+  - condition: or
+    conditions:
+      - condition: not
+        conditions:
+          - condition: state
+            state: Rain
+            entity_id: sensor.openweathermap_precipitation_kind
+action:
+  - service: script.normal_irrigation
+mode: single

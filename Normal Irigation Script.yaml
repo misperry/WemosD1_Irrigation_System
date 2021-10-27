@@ -1,0 +1,106 @@
+sequence:
+  - service: switch.turn_off
+    target:
+      area_id: sprinklers
+  - type: turn_on
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.well_pump
+    domain: switch
+  - type: turn_on
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_1
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 20
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_1
+    domain: switch
+  - type: turn_on
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_2
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 20
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_2
+    domain: switch
+  - type: turn_on
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_3
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 20
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_3
+    domain: switch
+  - type: turn_on
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_4
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 20
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_4
+    domain: switch
+  - type: turn_on
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_5
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 20
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_5
+    domain: switch
+  - type: turn_on
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_6
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 20
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_6
+    domain: switch
+  - type: turn_on
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_7
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 20
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.zone_7
+    domain: switch
+  - type: turn_off
+    device_id: 0777f80f5f964105210384c7cebc5c73
+    entity_id: switch.well_pump
+    domain: switch
+mode: single
+alias: Normal Irrigation
+icon: mdi:water-pump
