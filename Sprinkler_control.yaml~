@@ -1,18 +1,7 @@
 esphome:
-  name: irrigation-node
+  name: my-new-device
   platform: ESP8266
-  board: d1_mini
-  esp8266_restore_from_flash: false
-  on_boot:
-    - switch.turn_off: relay_1
-    - switch.turn_off: relay_2
-    - switch.turn_off: relay_3
-    - switch.turn_off: relay_4
-    - switch.turn_off: relay_5
-    - switch.turn_off: relay_6
-    - switch.turn_off: relay_7
-    - switch.turn_off: relay_8
-    
+  board: d1_mini_pro
 
 # Enable logging
 logger:
@@ -21,19 +10,19 @@ logger:
 api:
 
 ota:
-  password: "58cde34e759528b22cd12f8e67f1545a"
+  password: "bcce0789d9ddf099920d55621b9f7717"
 
 wifi:
-  ssid: !secret wifi_ssid_ext
-  password: !secret wifi_password
-  fast_connect: true
+  ssid: ""
+  password: ""
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Irrigation-Node Fallback Hotspot"
-    password: "Ne6eiK6wqhNl"
+    ssid: "My-New-Device Fallback Hotspot"
+    password: "a5aSsOiYW0d4"
 
 captive_portal:
+
 
 switch:
   - platform: gpio
@@ -82,12 +71,7 @@ switch:
     name: "Well Pump"
     id: relay_8
     pin: 16
-    inverted: True
-
-binary_sensor:
-  - platform: status
-    name: "Irrigation System Status"
-    id: irr_stat
+    inverted: true
 
 interval:
   - interval: 15s
